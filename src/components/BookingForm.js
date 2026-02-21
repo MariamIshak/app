@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { submitAPI } from '../api';
+import { submitAPI } from '../api/api';
 
 function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [date, setDate] = useState('');

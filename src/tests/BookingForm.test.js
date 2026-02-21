@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import BookingForm from '../components/BookingForm';
 
 // Mock the API
-import * as api from '../api';
+import * as api from '../api/api';
 
 jest.mock('../api');
 

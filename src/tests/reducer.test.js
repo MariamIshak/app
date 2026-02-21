@@ -1,7 +1,7 @@
 import { initializeTimes, updateTimes } from '../utils/reducer';
 
 // Mock the API functions
-import * as api from '../api';
+import * as api from '../api/api';
 
 jest.mock('../api');
 

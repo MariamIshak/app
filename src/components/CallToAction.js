@@ -10,7 +10,7 @@ function CallToAction() {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button><Link to="/booking">Reserve a Table</Link></button>
+          <button><Link to="/booking" style={{ color: '#333333', textDecoration: 'none' ,  fontSize: '1rem'}}>Reserve a Table</Link></button>
         </div>
               <img src={image} alt="Little Lemon Restaurant" />
 

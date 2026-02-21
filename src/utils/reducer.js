@@ -1,4 +1,4 @@
-import { fetchAPI } from '../api';
+import { fetchAPI } from '../api/api';
 
 // Initialize times function using API
 export const initializeTimes = () => {
