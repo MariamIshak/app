@@ -1,31 +1,34 @@
 import React from 'react';
-
+import image1 from '../assets/customer1.png';
+import image2 from '../assets/customer2.png';
+import image3 from '../assets/customer3.png';
+import image4 from '../assets/customer4.png';
 const testimonialsData = [
   {
     id: 1,
     name: 'John Doe',
-    image: 'customer1.png',
+    image: image1,
     rating: 5,
     review: 'Amazing food and service!',
   },
   {
     id: 2,
     name: 'Jane Smith',
-    image: 'customer2.png',
+    image: image2,
     rating: 5,
     review: 'Best Mediterranean in Chicago.',
   },
   {
     id: 3,
     name: 'Alex Johnson',
-    image: 'customer3.png',
+    image: image3,
     rating: 4,
     review: 'Will definitely come back!',
   },
   {
     id: 4,
     name: 'Emily Davis',
-    image: 'customer4.png',
+    image: image4,
     rating: 5,
     review: 'Authentic and delicious.',
   },

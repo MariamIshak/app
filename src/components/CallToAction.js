@@ -1,7 +1,6 @@
 import React from 'react';
-import image from '../assets/restauranfood.jpg';
 import { Link } from 'react-router-dom';
-
+import image from '../assets/customer4.png';
 function CallToAction() {
   return (
     <section className="hero">
@@ -10,10 +9,17 @@ function CallToAction() {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button><Link to="/booking" style={{ color: '#333333', textDecoration: 'none' ,  fontSize: '1rem'}}>Reserve a Table</Link></button>
+          <Link to="/booking" className="hero-button">
+            Reserve a Table
+          </Link>
         </div>
-              <img src={image} alt="Little Lemon Restaurant" />
-
+        <div className="hero-image-container">
+          <img 
+            src={image} 
+            alt="Little Lemon Restaurant - Mediterranean dishes" 
+            className="hero-image"
+          />
+        </div>
       </div>
     </section>
   );
