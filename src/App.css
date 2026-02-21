@@ -5,23 +5,31 @@ body {
   padding: 0;
   color: #333333;
   background-color: #EDEFEE;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+/* Nav */
+
+nav {
+  width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header img {
-  height: 50px;
+.nav-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-/* Nav */
+nav img {
+  height: 3rem;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -34,44 +42,65 @@ nav a {
   text-decoration: none;
   color: #333333;
   font-weight: bold;
+  padding: 0.5rem;
 }
 
 nav a:hover {
   color: #495E57;
 }
 
-/* Main */
-main {
-  padding: 2rem;
+/* Responsive Design for Nav */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 /* Hero Section */
+
 .hero {
-  display: flex;
-  align-items: center;
   background-color: #495E57;
   color: #FFFFFF;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  padding: 10rem 0;
+  position: relative;
+  overflow: visible;
+  margin: 0;
+  /* height: 60vh; */
+}
+
+.hero-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
 .hero-content {
   flex: 1;
-  padding-right: 2rem;
+  padding-right: 50vw;
 }
 
-.hero h1 {
-  margin: 0;
+.hero-content h1 {
   font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-.hero h2 {
-  margin: 0.5rem 0;
+.hero-content h2 {
   font-size: 1.5rem;
+  margin: 0.5rem 0;
 }
 
-.hero p {
+.hero-content p {
   margin: 1rem 0;
 }
 
@@ -87,13 +116,35 @@ main {
 
 .hero img {
   flex: 1;
-  max-width: 400px;
+  width: 50%;
+  max-width: 30vw; /* Reduced from 40vw to make it smaller */
+  height: 80vh;
   border-radius: 8px;
+  position: absolute;
+  top:7vh;
+  right: 10vw;
+  object-fit: cover;
+}
+
+/* Responsive Design for Hero */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+
+  .hero img {
+    max-width: 70vw; /* Adjusted for mobile to keep it smaller */
+    bottom: 0;
+    margin-top: 1rem;
+  }
 }
 
 /* Specials Section */
 .specials {
-  margin-bottom: 2rem;
+  margin: 2rem;
+  margin-top: 7rem;
 }
 
 .specials-header {
@@ -104,6 +155,7 @@ main {
 }
 
 .specials h2 {
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -118,7 +170,8 @@ main {
 }
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
@@ -127,7 +180,6 @@ main {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1;
   text-align: center;
 }
 
@@ -139,6 +191,7 @@ main {
 }
 
 .card h3 {
+  font-size: 1.2rem;
   margin: 0.5rem 0;
 }
 
@@ -157,22 +210,20 @@ main {
   font-weight: bold;
 }
 
-.card a:hover {
-  text-decoration: underline;
-}
-
 /* Testimonials Section */
 .testimonials {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .testimonials h2 {
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .testimonial-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
@@ -181,35 +232,218 @@ main {
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1;
   text-align: center;
 }
 
-.testimonial-card p {
-  margin: 0.5rem 0;
+.testimonial-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  color: #F4CE14;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .testimonial-card .name {
   font-weight: bold;
   color: #495E57;
+  margin-bottom: 0.5rem;
+}
+
+/* Chicago Section */
+.chicago {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem;
+  align-items: center;
+}
+
+.chicago h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.chicago p {
+  margin: 1rem 0;
+}
+
+.chicago-images {
+  position: relative;
+}
+
+.chicago-images img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.chicago-images img:nth-child(2) {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: calc(100% - 2rem);
+}
+
+/* Booking Page */
+.booking-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #495E57;
+}
+
+.booking-page p {
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #495E57;
+}
+
+.submit-btn {
+  background-color: #F4CE14;
+  color: #333333;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #e5bd12;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Confirmed Booking Page */
+.confirmed-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.confirmation-content {
+  text-align: center;
+  max-width: 500px;
+  background-color: #FFFFFF;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-content h1 {
+  color: #495E57;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #495E57;
+  color: #F4CE14;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin: 0 auto 1.5rem;
+}
+
+.confirmation-content p {
+  margin: 0.5rem 0;
+  color: #333333;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #F4CE14;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.home-link:hover {
+  background-color: #e5bd12;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .confirmation-content {
+    padding: 2rem;
+  }
+
+  .confirmation-content h1 {
+    font-size: 2rem;
+  }
 }
 
 /* Footer */
 footer {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   padding: 2rem;
   background-color: #495E57;
   color: #FFFFFF;
 }
 
-.footer-column {
-  flex: 1;
-  padding: 0 1rem;
-}
-
 .footer-column img {
-  height: 50px;
+  height: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -227,41 +461,24 @@ footer {
   text-decoration: none;
 }
 
-.footer-column a:hover {
-  text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
+  .hero {
+    grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .chicago {
+    grid-template-columns: 1fr;
+  }
+
+  .chicago-images img:nth-child(2) {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content {
-    padding-right: 0;
-    padding-bottom: 1rem;
-  }
-
-  .cards {
-    flex-direction: column;
-  }
-
-  .testimonial-cards {
-    flex-direction: column;
-  }
-
-  footer {
     flex-direction: column;
     text-align: center;
   }
