@@ -1,4 +1,7 @@
 import React from 'react';
+import image1 from '../assets/restaurant chef B.jpg';
+import image2 from '../assets/restaurant.jpg';
+
 
 function Chicago() {
   return (
@@ -8,8 +11,8 @@ function Chicago() {
         <p>Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally sourced menu with daily specials.</p>
       </div>
       <div className="chicago-images">
-        <img src="chicago1.png" alt="Little Lemon Interior" />
-        <img src="chicago2.png" alt="Little Lemon Exterior" />
+        <img src={image1} alt="Little Lemon Interior" />
+        <img src={image2} alt="Little Lemon Exterior" />
       </div>
     </section>
   );

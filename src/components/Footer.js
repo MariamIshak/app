@@ -1,10 +1,11 @@
 import React from 'react';
+import logo from '../assets/Logo.svg';
 
 function Footer() {
   return (
     <footer>
       <div className="footer-column">
-        <img src="logo.png" alt="Little Lemon Logo" />
+        <img src={logo} alt="Little Lemon Logo" />
         <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
       </div>
       <div className="footer-column">
